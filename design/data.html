@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.dataset.theme=new URLSearchParams(location.search).get("theme")||"paper";</script>
+<title>设置 · 月结单版</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="screen">
+  <header class="head pad-x">
+    <div class="brandline">
+      <span class="bleft"><button class="back">‹</button><span class="brand">设置 / SETTINGS</span></span>
+      <button class="topgear" aria-label="关闭" style="font-size:20px;line-height:1">×</button>
+    </div>
+    <div class="pagehead">
+      <div class="date">数据</div>
+      <div class="pgmeta">本机存储 · 无云同步</div>
+    </div>
+    <div class="hr"></div>
+  </header>
+
+  <div class="stat3 pad-x">
+    <div><span class="label">累计记录</span><b>181 笔</b></div>
+    <div><span class="label">最早一笔</span><b>2026.08</b></div>
+    <div><span class="label">占用空间</span><b>19.7 KB</b></div>
+  </div>
+
+  <section class="sgroup pad-x">
+    <div class="label">导出 / EXPORT</div>
+    <div class="srow"><span><span class="sname">导出 CSV</span><span class="sdesc">Excel、Numbers 可直接透视</span></span><span class="sarrow">→</span></div>
+    <div class="srow"><span><span class="sname">备份 JSON</span><span class="sdesc">完整记录 + 自定义分类</span></span><span class="sarrow">→</span></div>
+    <div class="srow"><span><span class="sname">从备份恢复</span><span class="sdesc">选择之前导出的 .json 文件</span></span><span class="sarrow">→</span></div>
+  </section>
+
+  <section class="sgroup pad-x">
+    <div class="label">分类 / CATEGORIES</div>
+    <div class="srow"><span><span class="sname">管理分类</span><span class="sdesc">10 个分类 · 可新增「宠物」「订阅」</span></span><span class="sarrow">→</span></div>
+  </section>
+
+  <section class="sgroup pad-x">
+    <div class="label">危险 / DANGER</div>
+    <div class="srow danger"><span><span class="sname">清空所有数据</span><span class="sdesc">不可恢复，建议先导出备份</span></span></div>
+  </section>
+
+  <section class="sgroup pad-x">
+    <div class="label">说明 / NOTES</div>
+    <p class="snote">记录只保存在这台手机里，清除应用数据会一并删除。导出的 CSV 金额是数字列，Excel 可直接透视；JSON 用于换机时完整恢复。</p>
+  </section>
+
+  <div class="foot pad-x">
+    <div>上次导出：10.30 · 建议每周一次</div>
+    <div style="margin-top:5px;">v1.0.0 · 无网络权限 · 数据只在本机</div>
+  </div>
+</div>
+</body>
+</html>

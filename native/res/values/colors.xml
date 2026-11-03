@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="paper">#F1EEE0</color>
+  <color name="paper2">#E8E3D2</color>
+  <color name="paper3">#DDD5C0</color>
+  <color name="card">#F7F5EB</color>
+  <color name="ink">#1A2018</color>
+  <color name="ink2">#4D5247</color>
+  <color name="ink3">#6A6A59</color>
+  <color name="ink4">#8A8574</color>
+  <color name="accent">#2F5A43</color>
+  <color name="accentSoft">#E4EBE3</color>
+  <color name="onAccent">#F1EEE0</color>
+  <color name="warn">#A3472F</color>
+  <color name="danger">#963A2A</color>
+  <color name="line">#2B1A2018</color>
+  <color name="lineSoft">#1A1A2018</color>
+  <color name="white">#FFFFFF</color>
+</resources>

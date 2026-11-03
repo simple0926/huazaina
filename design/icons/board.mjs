@@ -1,0 +1,11 @@
+import { chromium } from 'playwright-core';
+import { resolve } from 'node:path';
+const EXE = process.env.CHROME;
+const b = await chromium.launch(EXE ? { executablePath: EXE } : {});
+const ctx = await b.newContext({ viewport: { width: 1440, height: 820 }, deviceScaleFactor: 1.5 });
+const p = await ctx.newPage();
+await p.goto('file://' + resolve('board.html'));
+await p.waitForTimeout(1400);
+await p.screenshot({ path: resolve('shots/board.png'), animations: 'disabled' });
+console.log('board ok');
+await b.close();

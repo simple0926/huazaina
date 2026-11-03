@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设置 · 仪表盘版</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="app">
+  <header class="bar px">
+    <button class="icon-btn" style="border:0;background:none;width:24px"><i data-icon="left"></i></button>
+    <div class="title" style="font-size:17px">设置</div>
+    <span style="width:24px"></span>
+  </header>
+
+  <div class="set-title">
+    <div class="t">数据</div>
+    <div class="s">本机存储 · 无云同步</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="k">累计记录</div><b>181 笔</b></div>
+    <div class="stat"><div class="k">最早一笔</div><b>2026.08</b></div>
+    <div class="stat"><div class="k">占用空间</div><b>19.7 KB</b></div>
+  </div>
+
+  <div class="sblock">
+    <div class="srow"><span class="ic"><i data-icon="down"></i></span><div class="main"><div class="nm">导出 CSV</div><div class="ds">Excel、Numbers 可直接透视</div></div><i data-icon="right"></i></div>
+    <div class="srow"><span class="ic"><i data-icon="down"></i></span><div class="main"><div class="nm">备份 JSON</div><div class="ds">完整记录 + 自定义分类</div></div><i data-icon="right"></i></div>
+    <div class="srow"><span class="ic"><i data-icon="up"></i></span><div class="main"><div class="nm">从备份恢复</div><div class="ds">选择之前导出的 .json 文件</div></div><i data-icon="right"></i></div>
+  </div>
+
+  <div class="sblock">
+    <div class="srow"><span class="ic"><i data-icon="list"></i></span><div class="main"><div class="nm">管理分类</div><div class="ds">10 个分类 · 可新增「宠物」「订阅」</div></div><i data-icon="right"></i></div>
+  </div>
+
+  <div class="sblock">
+    <div class="srow danger"><span class="ic" style="background:#FEF2F2;color:#DC2626"><i data-icon="trash"></i></span><div class="main"><div class="nm">清空所有数据</div><div class="ds">不可恢复，建议先导出备份</div></div></div>
+  </div>
+
+  <div style="margin-top:auto"></div>
+  <div class="cta-wrap" style="padding:10px 16px 0"><button class="cta">导出全部数据 · CSV</button></div>
+  <div class="sfoot">上次导出：10.30 · 建议每周一次<br>v1.0.0 · 无网络权限 · 数据只在本机</div>
+</div>
+<script src="icons.js"></script>
+</body>
+</html>

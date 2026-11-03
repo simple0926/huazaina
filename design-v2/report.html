@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>报告 · 仪表盘版</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="app">
+  <header class="bar px">
+    <div><div class="title">报告</div><div class="sub2">数据只在本机 · 已记 181 笔</div></div>
+    <button class="icon-btn"><i data-icon="gear"></i></button>
+  </header>
+
+  <div class="seg"><button>日</button><button>周</button><button class="on">月</button><button>年</button></div>
+
+  <div class="pnav">
+    <button><i data-icon="left"></i></button>
+    <div class="p">2026年10月 <em>已过 31 天</em></div>
+    <button><i data-icon="right"></i></button>
+  </div>
+
+  <section class="hero">
+    <span class="label">总支出 / TOTAL</span>
+    <div class="total">¥9,483.00</div>
+    <div class="meta"><span>72 笔</span><span>日均 ¥305.90</span><span class="up">↑ 14% 较上月</span></div>
+  </section>
+
+  <div class="kpis">
+    <div class="kpi"><div class="k">最大一笔</div><b>居住 ¥3,200</b></div>
+    <div class="kpi"><div class="k">最高一天</div><b>10.30 ¥3,296</b></div>
+    <div class="kpi"><div class="k">笔均</div><b>¥131.71</b></div>
+  </div>
+
+  <div class="card">
+    <div class="hd"><span class="t">每日支出</span><span class="s">最高 10.30 ¥3,296</span></div>
+    <svg class="spark" id="spark" viewBox="0 0 334 58" preserveAspectRatio="none"></svg>
+    <div class="sparkx"><span>1</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25</span><span>31</span></div>
+  </div>
+
+  <div class="card">
+    <div class="hd"><span class="t">分类排行</span><span class="s">占比 · 金额</span></div>
+    <div class="cat-line"><span class="nm">居住</span><span class="track"><i style="width:41%"></i></span><span class="pc">41%</span><span class="vl">3,885.00</span></div>
+    <div class="cat-line"><span class="nm">学习</span><span class="track"><i style="width:13%"></i></span><span class="pc">13%</span><span class="vl">1,228.00</span></div>
+    <div class="cat-line"><span class="nm">人情</span><span class="track"><i style="width:12%"></i></span><span class="pc">12%</span><span class="vl">1,144.00</span></div>
+    <div class="cat-line"><span class="nm">购物</span><span class="track"><i style="width:9%"></i></span><span class="pc">9%</span><span class="vl">831.00</span></div>
+    <div class="cat-line"><span class="nm">娱乐</span><span class="track"><i style="width:9%"></i></span><span class="pc">9%</span><span class="vl">831.00</span></div>
+    <div class="cat-line"><span class="nm">其他</span><span class="track"><i style="width:16%"></i></span><span class="pc">16%</span><span class="vl">1,564.00</span></div>
+  </div>
+
+  <div class="card">
+    <div class="hd"><span class="t">支付方式</span><span class="s">3 种</span></div>
+    <div class="pay"><i style="width:50%"></i><i style="width:38%"></i><i style="width:12%"></i></div>
+    <div class="paylg"><span>微信 <b>4,730.50</b></span><span>支付宝 <b>3,612.00</b></span><span>现金 <b>1,140.50</b></span></div>
+  </div>
+
+  <div class="tip">居住占 41%，比上月多 ¥1,240。最大的一笔是 10.30 的房租 ¥3,200。</div>
+
+  <nav class="tabbar">
+    <a class="tab" href="#"><i data-icon="plus"></i>记账</a>
+    <a class="tab" href="#"><i data-icon="list"></i>明细</a>
+    <a class="tab on" href="#"><i data-icon="chart"></i>报告</a>
+  </nav>
+</div>
+<script src="icons.js"></script>
+<script>
+  const vals=[320,210,160,320,180,260,120,80,300,190,140,230,220,180,130,320,210,150,240,180,100,190,230,160,200,300,240,160,130,3296,222.5];
+  const W=334,H=58,max=Math.max(...vals);
+  const pts=vals.map((v,i)=>[i*(W/(vals.length-1)), H-2-(v/max)*(H-10)]);
+  const line=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const area=line+' L'+W+' '+H+' L0 '+H+' Z';
+  const maxIdx=vals.indexOf(max);
+  document.getElementById('spark').innerHTML =
+    '<path class="area" d="'+area+'"/><path class="line" d="'+line+'"/>'+
+    '<circle class="dot" cx="'+pts[maxIdx][0].toFixed(1)+'" cy="'+pts[maxIdx][1].toFixed(1)+'" r="2.6"/>';
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "huazaina",
+  "version": "2.0.2",
+  "private": true,
+  "description": "花在哪 —— 本地优先的 Android 收支账本",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test tests/core.test.mjs",
+    "test:ui": "node --test tests/ui.test.mjs",
+    "shots": "node tools/shoot.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.64.1"
+  },
+  "license": "UNLICENSED"
+}

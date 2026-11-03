@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>花在哪 · 图标表</title>
+<style>
+  :root{--canvas:#E6E1D4;--ink:#17160F;--muted:#5B5548;--faint:#857D6E;--rule:rgba(23,22,15,.2);--accent:#2F5A43;
+    --serif:"Songti SC","Source Han Serif SC",Georgia,serif;--sans:-apple-system,"PingFang SC",sans-serif;--mono:"SF Mono",ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:600px;overflow:hidden}
+  body{background:var(--canvas);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .board{padding:44px 70px}
+  .head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--rule);padding-bottom:14px}
+  .k{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--muted);margin-bottom:8px}
+  h1{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.1}
+  h1 em{font-style:normal;color:var(--faint)}
+  .head p{font-size:10.5px;color:var(--muted);line-height:1.7;max-width:330px}
+  .row{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:22px}
+  .col .top{display:flex;align-items:baseline;justify-content:space-between;border-top:2px solid var(--accent);padding-top:7px}
+  .col .top span{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;color:var(--accent)}
+  .col .top b{font-family:var(--serif);font-size:21px;font-weight:500}
+  .main{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:12px}
+  .big{width:188px;height:188px;display:block;filter:drop-shadow(0 10px 18px rgba(35,29,17,.18))}
+  .sizes{display:flex;align-items:flex-end;gap:14px}
+  .sz{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+  .sz img{display:block;filter:drop-shadow(0 3px 6px rgba(35,29,17,.13))}
+  .sz span{font-family:var(--mono);font-size:7.5px;color:var(--faint)}
+  .desc{font-size:10px;line-height:1.6;color:var(--muted);margin-top:10px;max-width:370px}
+  .desc b{color:var(--ink);font-weight:500}
+  .foot{display:flex;justify-content:space-between;border-top:1px solid var(--rule);margin-top:16px;padding-top:9px;
+    font-family:var(--mono);font-size:7.5px;letter-spacing:.1em;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="board">
+  <header class="head">
+    <div><div class="k">HUA ZAI NA / ICON SYSTEM / 2026.11</div><h1>三种图标，<em>同一套纸墨</em></h1></div>
+    <p>每个图标只留一个主角：账页的绿印、收支的 ¥、私章的字。都从 1024 画起，检查 48 / 72 / 96 的识别。</p>
+  </header>
+  <div class="row">
+    <section class="col">
+      <div class="top"><span>A / THE PAGE</span><b>账页</b></div>
+      <div class="main"><img class="big" src="icons/icon-a.svg" alt="账页图标">
+        <div class="sizes"><span class="sz"><img src="icons/icon-a.svg" width="48" height="48" alt="48"><span>48</span></span><span class="sz"><img src="icons/icon-a.svg" width="72" height="72" alt="72"><span>72</span></span><span class="sz"><img src="icons/icon-a.svg" width="96" height="96" alt="96"><span>96</span></span></div>
+      </div>
+      <p class="desc"><b>最稳。</b>四条账线 + 一枚绿印；缩到 48 仍读得出「一页账」。</p>
+    </section>
+    <section class="col">
+      <div class="top"><span>B / THE BALANCE</span><b>收支</b></div>
+      <div class="main"><img class="big" src="icons/icon-b.svg" alt="收支图标">
+        <div class="sizes"><span class="sz"><img src="icons/icon-b.svg" width="48" height="48" alt="48"><span>48</span></span><span class="sz"><img src="icons/icon-b.svg" width="72" height="72" alt="72"><span>72</span></span><span class="sz"><img src="icons/icon-b.svg" width="96" height="96" alt="96"><span>96</span></span></div>
+      </div>
+      <p class="desc"><b>最像单据。</b>墨框里一个 ¥，下半截松绿；支出与收入各一半。</p>
+    </section>
+    <section class="col">
+      <div class="top"><span>C / THE SEAL</span><b>私章</b></div>
+      <div class="main"><img class="big" src="icons/icon-c.svg" alt="私章图标">
+        <div class="sizes"><span class="sz"><img src="icons/icon-c.svg" width="48" height="48" alt="48"><span>48</span></span><span class="sz"><img src="icons/icon-c.svg" width="72" height="72" alt="72"><span>72</span></span><span class="sz"><img src="icons/icon-c.svg" width="96" height="96" alt="96"><span>96</span></span></div>
+      </div>
+      <p class="desc"><b>最认得出。</b>整块松绿 + 纸边 + 「账」；48 下字变密，绿块仍是记号。</p>
+    </section>
+  </div>
+  <div class="foot"><span>HUAZAINA / ICON STUDY 01</span><span>1024 MASTER · 48 / 72 / 96 CHECKS · 2026</span></div>
+</div>
+</body>
+</html>

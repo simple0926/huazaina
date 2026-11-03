@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #F4F1E6; }
+  body { width: 1680px; height: 1120px; font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif; color: #161A16; }
+  .sheet { width: 1680px; height: 1120px; padding: 56px 80px 40px; display: flex; flex-direction: column; position: relative; }
+  .sheet:before { content: ""; position: absolute; left: 80px; right: 80px; top: 188px; border-top: 1px solid #1A2018; opacity: .75; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; height: 132px; }
+  .eyebrow { font-size: 10px; letter-spacing: .2em; color: #5E6358; text-transform: uppercase; }
+  h1 { font-family: "Songti SC", "Source Han Serif SC", serif; font-weight: 500; font-size: 52px; line-height: 1.05; margin: 12px 0 8px; letter-spacing: .01em; }
+  .sub { font-size: 13px; color: #555A4F; letter-spacing: .04em; }
+  .meta { text-align: right; font-size: 10px; line-height: 1.8; color: #5E6358; letter-spacing: .1em; }
+  .meta b { display: block; font-weight: 400; color: #161A16; font-size: 12px; letter-spacing: .14em; }
+  .grid { display: grid; grid-template-columns: repeat(3, 480px); gap: 40px; margin-top: 32px; }
+  .card { height: 710px; background: #FBFAF3; border: 1px solid #D8D1BE; padding: 22px 24px 20px; display: flex; flex-direction: column; position: relative; }
+  .card.rec { border-top: 4px solid #2F5A43; }
+  .top { display: flex; align-items: flex-start; gap: 14px; min-height: 58px; }
+  .letter { font-family: "Songti SC", serif; font-size: 36px; line-height: .9; color: #161A16; width: 30px; }
+  .name { font-family: "Songti SC", serif; font-size: 24px; line-height: 1.1; margin: 0; font-weight: 500; }
+  .en { font-size: 9px; letter-spacing: .2em; color: #6B6A60; margin-top: 6px; }
+  .rec-tag { position: absolute; right: 20px; top: 18px; font-size: 9px; letter-spacing: .16em; color: #2F5A43; border: 1px solid #2F5A43; padding: 4px 7px 3px; }
+  .mark { height: 236px; display: flex; align-items: center; justify-content: center; padding-top: 3px; }
+  .mark img { width: 214px; height: 214px; object-fit: contain; }
+  .lockup { height: 146px; display: flex; align-items: center; justify-content: center; border-top: 1px solid #E2DCCB; border-bottom: 1px solid #E2DCCB; margin: 2px 0 14px; }
+  .lockup img { width: 402px; height: auto; }
+  .sizes { display: flex; justify-content: center; align-items: flex-end; gap: 30px; height: 64px; }
+  .size { width: 64px; text-align: center; }
+  .size img { display: block; margin: 0 auto 5px; image-rendering: auto; }
+  .size span { font-size: 8px; letter-spacing: .12em; color: #777B6F; }
+  .note { margin: 16px 0 0; font-size: 13.5px; line-height: 1.65; color: #33382F; letter-spacing: .01em; }
+  .note b { font-weight: 600; color: #161A16; }
+  .cardfoot { margin-top: auto; border-top: 1px solid #E2DCCB; padding-top: 10px; display: flex; justify-content: space-between; gap: 12px; font-size: 9px; letter-spacing: .02em; color: #6B6A60; line-height: 1.55; }
+  .cardfoot span:last-child { text-align: right; }
+  footer { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid #1A2018; padding-top: 14px; }
+  .rec-line { font-size: 14px; line-height: 1.6; color: #33382F; max-width: 1120px; }
+  .rec-line strong { color: #2F5A43; font-weight: 600; }
+  .fine { font-size: 9px; color: #6B6A60; letter-spacing: .06em; text-align: right; line-height: 1.6; }
+  .green { display: inline-block; width: 7px; height: 7px; background: #2F5A43; margin-right: 8px; vertical-align: 1px; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div>
+      <div class="eyebrow">花在哪 · identity exploration</div>
+      <h1>三版 logo 方向</h1>
+      <div class="sub">私人账本 / 只给自己看 / 纸感、克制、可信 &nbsp;·&nbsp; 2026.11</div>
+    </div>
+    <div class="meta"><b>CONCEPT SHEET 01</b>3 DIRECTIONS<br>16 px / ONE COLOUR<br>SELECT ONE</div>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <div class="top"><div class="letter">A</div><div><h2 class="name">一页</h2><div class="en">THE PAGE</div></div></div>
+      <div class="mark"><img src="renders/a-symbol.png"></div>
+      <div class="lockup"><img src="renders/a-lockup.png"></div>
+      <div class="sizes">
+        <div class="size"><img src="renders/a-symbol.png" width="64" height="64"><span>64</span></div>
+        <div class="size"><img src="renders/a-symbol.png" width="32" height="32"><span>32</span></div>
+        <div class="size"><img src="renders/a-symbol.png" width="16" height="16"><span>16</span></div>
+      </div>
+      <p class="note"><b>三条账线，一枚私印。</b>把月结单缩成一张纸；最稳，延续现在的 App 图标。</p>
+      <div class="cardfoot"><span>适合 / 启动图标 · 账单页眉</span><span>注意 / 缩小后账线会糊</span></div>
+    </section>
+
+    <section class="card">
+      <div class="top"><div class="letter">B</div><div><h2 class="name">私章</h2><div class="en">THE SEAL</div></div></div>
+      <div class="mark"><img src="renders/b-symbol.png"></div>
+      <div class="lockup"><img src="renders/b-lockup.png"></div>
+      <div class="sizes">
+        <div class="size"><img src="renders/b-symbol.png" width="64" height="64"><span>64</span></div>
+        <div class="size"><img src="renders/b-symbol.png" width="32" height="32"><span>32</span></div>
+        <div class="size"><img src="renders/b-symbol.png" width="16" height="16"><span>16</span></div>
+      </div>
+      <p class="note"><b>花字圆印。</b>把名字盖成只属于你的章；最像品牌，也最直接说数据在你手里。</p>
+      <div class="cardfoot"><span>适合 / 印章 · 包装 · 启动图标</span><span>注意 / 花字缩小会糊</span></div>
+    </section>
+
+    <section class="card rec">
+      <div class="rec-tag">推荐</div>
+      <div class="top"><div class="letter">C</div><div><h2 class="name">问号</h2><div class="en">THE QUESTION</div></div></div>
+      <div class="mark"><img src="renders/c-symbol.png"></div>
+      <div class="lockup"><img src="renders/c-lockup.png"></div>
+      <div class="sizes">
+        <div class="size"><img src="renders/c-symbol.png" width="64" height="64"><span>64</span></div>
+        <div class="size"><img src="renders/c-symbol.png" width="32" height="32"><span>32</span></div>
+        <div class="size"><img src="renders/c-symbol.png" width="16" height="16"><span>16</span></div>
+      </div>
+      <p class="note"><b>账线折成问号，句点是方印。</b>名字本身就是问题；最锋利，16 px 仍成立。</p>
+      <div class="cardfoot"><span>适合 / 启动图标 · 页眉 · 贴纸</span><span>注意 / 需要字标一起出现</span></div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="rec-line"><span class="green"></span><strong>我推荐 C。</strong> 它没有用硬币、钱包、上升箭头这些记账老套，而是把「花在哪」这句问话直接变成标记。A 最稳，B 最像品牌；要长期放桌面，C 的记忆点最强。</div>
+    <div class="fine">字标为宋体示意，选定后转曲<br>黑白先成立，松墨绿随后上色</div>
+  </footer>
+</div>
+</body>
+</html>

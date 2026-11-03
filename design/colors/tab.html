@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>底部 tab · 三种配色</title>
+<link rel="stylesheet" href="../ui.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:240px;overflow:hidden}
+  body{background:#E7E3D8;color:#17160F;font-family:-apple-system,"PingFang SC",sans-serif;-webkit-font-smoothing:antialiased}
+  .board{padding:30px 74px}
+  .head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(23,22,15,.2);padding-bottom:12px}
+  .k{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:.14em;color:#5B5548}
+  h1{font-family:"Songti SC",Georgia,serif;font-size:22px;font-weight:500;margin-top:5px}
+  .row{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:18px}
+  .tcol{width:390px}
+  .tlabel{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:.1em;color:#5B5548;margin-bottom:6px}
+  .tframe{width:390px;height:54px;border:1px solid rgba(23,22,15,.16);background:var(--paper)}
+  .tnote{font-size:9.5px;color:#5B5548;margin-top:6px}
+  .nav{margin-top:0;border-top:1px solid var(--ink)}
+</style>
+</head>
+<body>
+<div class="board">
+  <div class="head">
+    <div><div class="k">BOTTOM TAB / 3 PALETTES</div><h1>底部操作 tab</h1></div>
+    <div style="font-size:10.5px;color:#5B5548;">54px · 图标 17 · 序号 10 · 选中：主色浅底 + 2px 顶线 · 1px 分隔</div>
+  </div>
+  <div class="row">
+    <div class="tcol" data-theme="pine">
+      <div class="tlabel">A 松墨 / PINE</div>
+      <div class="tframe">
+        <nav class="nav">
+          <a class="on" href="#"><i data-icon="pen"></i><span class="nl"><b>01</b>记账</span></a>
+          <a href="#"><i data-icon="list"></i><span class="nl"><b>02</b>明细</span></a>
+          <a href="#"><i data-icon="chart"></i><span class="nl"><b>03</b>报告</span></a>
+        </nav>
+      </div>
+      <div class="tnote">选中项：浅绿底 + 绿顶线，图标与序号同步绿</div>
+    </div>
+    <div class="tcol" data-theme="cobalt">
+      <div class="tlabel">B 钴蓝 / COBALT</div>
+      <div class="tframe">
+        <nav class="nav">
+          <a class="on" href="#"><i data-icon="pen"></i><span class="nl"><b>01</b>记账</span></a>
+          <a href="#"><i data-icon="list"></i><span class="nl"><b>02</b>明细</span></a>
+          <a href="#"><i data-icon="chart"></i><span class="nl"><b>03</b>报告</span></a>
+        </nav>
+      </div>
+      <div class="tnote">选中项：浅蓝底 + 蓝顶线，图标与序号同步蓝</div>
+    </div>
+    <div class="tcol" data-theme="clay">
+      <div class="tlabel">C 朱砂 / CINNABAR</div>
+      <div class="tframe">
+        <nav class="nav">
+          <a class="on" href="#"><i data-icon="pen"></i><span class="nl"><b>01</b>记账</span></a>
+          <a href="#"><i data-icon="list"></i><span class="nl"><b>02</b>明细</span></a>
+          <a href="#"><i data-icon="chart"></i><span class="nl"><b>03</b>报告</span></a>
+        </nav>
+      </div>
+      <div class="tnote">选中项：浅陶底 + 朱砂顶线，图标与序号同步朱砂</div>
+    </div>
+  </div>
+</div>
+<script src="../icons.js"></script>
+</body>
+</html>

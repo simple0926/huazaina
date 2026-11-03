@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>花在哪 · 仪表盘版 · 设计板</title>
+<style>
+  :root{--bg:#F8FAFC;--canvas:#E8EEF3;--ink:#0F172A;--muted:#475569;--faint:#94A3B8;--brand:#059669;--line:#D8E1EA;--sans:"Fira Sans","PingFang SC",sans-serif;--mono:"Fira Code",ui-monospace,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:1000px;overflow:hidden}
+  body{background:var(--canvas);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .board{padding:56px 62px}
+  .head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #C9D5E0;padding-bottom:20px}
+  .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);margin-bottom:10px}
+  h1{font-size:46px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+  h1 em{font-style:normal;color:var(--brand)}
+  .intro{max-width:380px;font-size:11.5px;line-height:1.85;color:var(--muted)}
+  .intro b{color:var(--ink);font-weight:500}
+  .frames{display:flex;gap:24px;margin-top:28px}
+  .frame{width:280px;flex:0 0 280px}
+  .phone{width:280px;height:607px;position:relative;overflow:hidden;background:var(--bg);box-shadow:0 16px 34px rgba(15,23,42,.14),0 1px 0 rgba(15,23,42,.16)}
+  .phone iframe{width:390px;height:844px;border:0;transform:scale(.718);transform-origin:0 0;display:block}
+  .cap{display:flex;justify-content:space-between;margin-top:10px;font-size:10px;color:var(--muted);letter-spacing:.04em}
+  .cap b{font-weight:500;color:var(--ink)}
+  .specs{display:grid;grid-template-columns:1.1fr 1.2fr 1fr 1.2fr;gap:34px;margin-top:30px;border-top:1px solid #C9D5E0;padding-top:18px}
+  .spec h3{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.12em;color:var(--muted);margin-bottom:8px}
+  .sw{display:flex;gap:7px}
+  .sw i{width:28px;height:28px;display:block}
+  .sw span{display:block;font-family:var(--mono);font-size:8px;color:var(--muted);margin-top:3px}
+  .spec p{font-size:10.5px;line-height:1.8;color:var(--muted)}
+  .spec p b{color:var(--ink);font-weight:500}
+  .foot{display:flex;justify-content:space-between;margin-top:22px;font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="board">
+  <header class="head">
+    <div>
+      <div class="kicker">UI DIRECTION 03 / SWISS DATA / 2026.11</div>
+      <h1>花在哪 <em>· 仪表盘</em></h1>
+    </div>
+    <p class="intro">把账本做成一块只给一个人看的数据仪表：<b>白纸、墨字、一个绿点</b>，所有金额对齐到同一条网格线。没有衬线、没有纸纹、没有装饰线；留下的只有层级、数字和操作。</p>
+  </header>
+
+  <div class="frames">
+    <div class="frame"><div class="phone"><iframe src="entry.html" scrolling="no"></iframe></div><div class="cap"><b>01 记账 / ENTRY</b><span>快速录入</span></div></div>
+    <div class="frame"><div class="phone"><iframe src="ledger.html" scrolling="no"></iframe></div><div class="cap"><b>02 明细 / LEDGER</b><span>按月流水</span></div></div>
+    <div class="frame"><div class="phone"><iframe src="report.html" scrolling="no"></iframe></div><div class="cap"><b>03 报告 / REPORT</b><span>数据仪表</span></div></div>
+    <div class="frame"><div class="phone"><iframe src="settings.html" scrolling="no"></iframe></div><div class="cap"><b>04 数据 / DATA</b><span>导出与备份</span></div></div>
+  </div>
+
+  <div class="specs">
+    <div class="spec"><h3>COLOR</h3><div class="sw">
+      <div><i style="background:#F8FAFC;border:1px solid #D8E1EA"></i><span>F8FAFC</span></div>
+      <div><i style="background:#0F172A"></i><span>0F172A</span></div>
+      <div><i style="background:#059669"></i><span>059669</span></div>
+      <div><i style="background:#DC2626"></i><span>DC2626</span></div>
+    </div></div>
+    <div class="spec"><h3>TYPE</h3><p><b>Fira Sans</b> · 界面与中文回退<br><b>Fira Code</b> · 金额、表格、标签</p></div>
+    <div class="spec"><h3>GRID</h3><p>390 × 844 · 16px 页边<br>4px 间距 · 6px 圆角<br>1px 边框 · 无阴影</p></div>
+    <div class="spec"><h3>RULES</h3><p>一个强调色：绿＝选中与主操作，红＝风险。<br>数字等宽、右对齐；图表只承担一个结论。</p></div>
+  </div>
+
+  <div class="foot"><span>HUAZAINA / UI STUDY 03 · UI-UX-PRO-MAX</span><span>390 × 844 · 4 SCREENS · 2026</span></div>
+</div>
+</body>
+</html>

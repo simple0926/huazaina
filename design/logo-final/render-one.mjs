@@ -1,0 +1,13 @@
+import { chromium } from 'playwright-core';
+import { resolve } from 'node:path';
+const EXE = process.env.CHROME;
+const [file, w, h, out] = process.argv.slice(2);
+const b = await chromium.launch(EXE ? { executablePath: EXE } : {});
+const p = await b.newPage();
+await p.setViewportSize({ width: +w, height: +h });
+await p.goto('file://' + resolve(file));
+await p.evaluate(() => document.fonts.ready);
+await p.waitForTimeout(250);
+await p.screenshot({ path: resolve(out), omitBackground: true });
+await b.close();
+console.log('rendered', out);

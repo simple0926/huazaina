@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.dataset.theme=new URLSearchParams(location.search).get("theme")||"paper";</script>
+<title>记账 · 月结单版</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .cat[data-c="food"] { --c: var(--cat-food); }
+  .cat[data-c="transit"] { --c: var(--cat-transit); }
+  .cat[data-c="shop"] { --c: var(--cat-shop); }
+  .cat[data-c="home"] { --c: var(--cat-home); }
+  .cat[data-c="fun"] { --c: var(--cat-fun); }
+  .cat[data-c="med"] { --c: var(--cat-med); }
+  .cat[data-c="study"] { --c: var(--cat-study); }
+  .cat[data-c="social"] { --c: var(--cat-social); }
+  .cat[data-c="phone"] { --c: var(--cat-phone); }
+  .cat[data-c="other"] { --c: var(--cat-other); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <header class="head pad-x">
+    <div class="brandline">
+      <span class="brand">花在哪</span>
+      <button class="topgear" aria-label="设置"><i data-icon="gear"></i></button>
+    </div>
+    <div class="headrow">
+      <div class="date">10.31 <em>周五</em></div>
+      <div class="monthspend">本月已花<b>¥9,483.00</b></div>
+    </div>
+    <div class="hr"></div>
+  </header>
+
+  <section class="entry pad-x">
+    <div class="label">金额 / AMOUNT</div>
+    <div class="amount">
+      <span class="cur">¥</span><span>32.50</span><i class="caret"></i>
+    </div>
+    <div class="amount-rule"></div>
+  </section>
+
+  <section class="pad-x">
+    <div class="catlabel">
+      <span class="label">分类 / CATEGORY</span>
+    </div>
+    <div class="cats">
+      <div class="cat on" data-c="food"><i data-icon="bowl"></i><span>餐饮</span></div>
+      <div class="cat" data-c="transit"><i data-icon="bus"></i><span>交通</span></div>
+      <div class="cat" data-c="shop"><i data-icon="bag"></i><span>购物</span></div>
+      <div class="cat" data-c="home"><i data-icon="home"></i><span>居住</span></div>
+      <div class="cat" data-c="fun"><i data-icon="ticket"></i><span>娱乐</span></div>
+      <div class="cat" data-c="med"><i data-icon="cross"></i><span>医疗</span></div>
+      <div class="cat" data-c="study"><i data-icon="book"></i><span>学习</span></div>
+      <div class="cat" data-c="social"><i data-icon="gift"></i><span>人情</span></div>
+      <div class="cat" data-c="phone"><i data-icon="phone"></i><span>通讯</span></div>
+      <div class="cat" data-c="other"><i data-icon="dots"></i><span>其他</span></div>
+    </div>
+    <div class="meta">
+      <button><span class="mk">日期</span><span class="mv">10.31</span></button>
+      <button><span class="mk">备注</span><span class="mv">公司楼下简餐</span></button>
+      <button><span class="mk">付款</span><span class="mv">微信</span></button>
+    </div>
+    <div class="today"><i></i>今天 3 笔 · ¥222.50</div>
+  </section>
+
+  <div class="pad">
+    <button class="key">7</button>
+    <button class="key">8</button>
+    <button class="key">9</button>
+    <button class="key">4</button>
+    <button class="key">5</button>
+    <button class="key">6</button>
+    <button class="key">1</button>
+    <button class="key">2</button>
+    <button class="key">3</button>
+    <button class="key">.</button>
+    <button class="key">0</button>
+    <button class="key ghost"><i data-icon="back"></i></button>
+  </div>
+
+  <div class="cta-wrap pad-x">
+    <button class="cta">记下这笔 <span class="arrow">→</span></button>
+  </div>
+
+  <nav class="nav">
+    <a class="on" href="#"><i data-icon="pen"></i><span class="nl"><b>01</b>记账</span></a>
+    <a href="#"><i data-icon="list"></i><span class="nl"><b>02</b>明细</span></a>
+    <a href="#"><i data-icon="chart"></i><span class="nl"><b>03</b>报告</span></a>
+  </nav>
+</div>
+<script src="icons.js"></script>
+</body>
+</html>

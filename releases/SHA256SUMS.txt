@@ -1,0 +1,2 @@
+f348c468d3d02bd04adcd813e9d62906016b2f6ce1e2bf9ad738d0648b6fa7d5  huazaina-native-v2.0.2.apk
+f293adffd215ddabbd2da069f8992494c939ed6b1207a1d914edd83f1ccad5ff  huazaina-webview-v1.2.0.apk

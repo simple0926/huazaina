@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <circle cx="128" cy="128" r="84" fill="#111111"/>
+  <circle cx="128" cy="128" r="72" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <text x="128" y="164" font-family="Songti SC, 'Source Han Serif SC', serif" font-size="96" font-weight="500" text-anchor="middle" fill="#FFFFFF">花</text>
+</svg>

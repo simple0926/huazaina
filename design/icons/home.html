@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>花在哪 · 桌面</title>
+<style>
+  :root{
+    --wall:#EAE5D7; --paper:#F1EEE0; --tile:#F8F5EB;
+    --ink:#1A2018; --ink-2:#4D5247; --ink-3:#6A6A59; --ink-4:#8A8574;
+    --accent:#2F5A43; --line:rgba(26,32,24,.14); --line-soft:rgba(26,32,24,.08);
+    --serif:"Songti SC","Source Han Serif SC",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif;
+    --mono:"SF Mono",ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{width:390px;height:844px;overflow:hidden}
+  body{
+    background:
+      repeating-linear-gradient(180deg, transparent 0 47px, rgba(26,32,24,.045) 47px 48px),
+      var(--wall);
+    color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  /* 状态栏 */
+  .status{display:flex;align-items:center;justify-content:space-between;height:46px;padding:10px 24px 0}
+  .status .time{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--ink-2)}
+  .status .right{display:flex;align-items:center;gap:6px;color:var(--ink-2)}
+  .status svg{display:block}
+  /* 时钟 */
+  .clock{margin:20px 30px 0}
+  .clock .t{font-family:var(--serif);font-size:78px;line-height:.94;letter-spacing:-.035em;font-weight:500}
+  .clock .d{margin-top:10px;font-size:11px;letter-spacing:.06em;color:var(--ink-3)}
+  .clock .r{width:26px;height:2px;background:var(--accent);margin-top:11px}
+  /* 桌面应用 */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 10px;padding:0 24px;margin-top:34px}
+  .app{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0}
+  .tile{width:62px;height:62px;border-radius:18px;background:var(--tile);display:grid;place-items:center;
+    border:1px solid rgba(26,32,24,.055);box-shadow:0 4px 10px rgba(35,29,17,.06),0 1px 0 rgba(255,255,255,.65) inset}
+  .tile svg{width:29px;height:29px;color:var(--ink)}
+  .app-icon{width:62px;height:62px;border-radius:15px;overflow:hidden;display:block;
+    box-shadow:0 7px 16px rgba(35,29,17,.16),0 1px 2px rgba(35,29,17,.14)}
+  .app-icon img{width:62px;height:62px;display:block}
+  .label{font-size:10.5px;color:var(--ink-2);letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:74px;text-align:center}
+  .app.hero .label{color:var(--ink)}
+  /* 底部 dock */
+  .dots{position:absolute;left:0;right:0;bottom:118px;display:flex;justify-content:center;gap:6px}
+  .dots i{width:4px;height:4px;border-radius:50%;background:rgba(26,32,24,.18)}
+  .dots i.on{background:var(--ink-2)}
+  .dock{position:absolute;left:18px;right:18px;bottom:20px;height:82px;border-radius:27px;
+    background:rgba(248,245,235,.78);border:1px solid rgba(255,255,255,.6);
+    box-shadow:0 12px 30px rgba(35,29,17,.10);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    display:flex;align-items:center;justify-content:space-around;padding:0 12px}
+  .dock .tile{width:54px;height:54px;border-radius:15px;background:rgba(255,255,255,.45);border:0;box-shadow:none}
+  .dock .tile svg{width:27px;height:27px}
+  .homebar{position:absolute;left:50%;bottom:7px;width:118px;height:4px;margin-left:-59px;border-radius:2px;background:rgba(26,32,24,.22)}
+</style>
+</head>
+<body>
+  <div class="status">
+    <span class="time">10:31</span>
+    <span class="right">
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1.5 9.5v1M5 7.5v3M8.5 5v5.5M12 2.5v8"/></svg>
+      <svg width="16" height="13" viewBox="0 0 16 13" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M1 4.5C5 1 11 1 15 4.5M3.5 7C6.4 4.6 9.6 4.6 12.5 7M6.2 9.5c1.1-.9 2.5-.9 3.6 0"/><circle cx="8" cy="11.5" r=".9" fill="currentColor" stroke="none"/></svg>
+      <svg width="23" height="12" viewBox="0 0 23 12" fill="none"><rect x="1" y="1.5" width="18" height="9" rx="2.4" stroke="currentColor" stroke-width="1.2"/><rect x="2.8" y="3.3" width="13" height="5.4" rx="1.2" fill="currentColor"/><path d="M21 4.4v3.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </span>
+  </div>
+
+  <div class="clock">
+    <div class="t">10:31</div>
+    <div class="d">周五 · 11月2日</div>
+    <div class="r"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="dots"><i class="on"></i><i></i></div>
+  <div class="dock" id="dock"></div>
+  <div class="homebar"></div>
+
+<script>
+  const SYS = {
+    phone: '<path d="M6.8 3.6h3.1l1.5 4.3-2.2 1.4a13.5 13.5 0 0 0 5.5 5.5l1.4-2.2 4.3 1.5v3.1a2 2 0 0 1-2.2 2C9.9 19.2 4.8 14.1 4.8 5.8a2 2 0 0 1 2-2.2z"/>',
+    message: '<path d="M4 6.4A2.4 2.4 0 0 1 6.4 4h11.2A2.4 2.4 0 0 1 20 6.4v6.2a2.4 2.4 0 0 1-2.4 2.4H10l-4.6 3.2v-3.2A2.4 2.4 0 0 1 4 12.6z"/>',
+    camera: '<rect x="3.4" y="7" width="17.2" height="12.2" rx="2.6"/><circle cx="12" cy="13" r="3.4"/><path d="M8.2 7l1.2-2.2h5.2L15.8 7"/>',
+    photos: '<rect x="3.4" y="4.6" width="17.2" height="14.8" rx="2.4"/><circle cx="8.4" cy="9.2" r="1.4"/><path d="M4 17l4.8-4.8 4 3.8 3-2.8L20 17"/>',
+    map: '<path d="M12 21s6.8-6.1 6.8-10.8a6.8 6.8 0 1 0-13.6 0C5.2 14.9 12 21 12 21z"/><circle cx="12" cy="10.2" r="2.4"/>',
+    music: '<path d="M9 18V6l10-2v12"/><circle cx="6.6" cy="18" r="2.4"/><circle cx="16.6" cy="16" r="2.4"/>',
+    settings: '<circle cx="12" cy="12" r="3.1"/><path d="M19.4 14.6a1.7 1.7 0 0 0 .34 1.88l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.55 1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.88 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.55-1.1 1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.88.34H9a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.88-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.88V9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
+    browser: '<circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8M12 3.6c2.4 2.4 2.4 14.4 0 16.8M12 3.6c-2.4 2.4-2.4 14.4 0 16.8"/>',
+    clock: '<circle cx="12" cy="12" r="8.4"/><path d="M12 7v5l3 2"/>',
+    calc: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 7h7M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01"/>',
+    files: '<path d="M3.5 7A2.5 2.5 0 0 1 6 4.5h4l2 2h6A2.5 2.5 0 0 1 20.5 9v7A2.5 2.5 0 0 1 18 18.5H6A2.5 2.5 0 0 1 3.5 16z"/>'
+  };
+  function sys(name){
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round">' + (SYS[name] || '') + '</svg>';
+  }
+  const icon = new URLSearchParams(location.search).get('icon') || 'a';
+  document.body.dataset.icon = icon;
+  const apps = [
+    { hero: true, label: '花在哪' },
+    { label: '电话', icon: 'phone' },
+    { label: '信息', icon: 'message' },
+    { label: '相机', icon: 'camera' },
+    { label: '相册', icon: 'photos' },
+    { label: '地图', icon: 'map' },
+    { label: '音乐', icon: 'music' },
+    { label: '设置', icon: 'settings' }
+  ];
+  document.getElementById('grid').innerHTML = apps.map(function(a){
+    return '<div class="app' + (a.hero ? ' hero' : '') + '">'
+      + (a.hero
+        ? '<span class="app-icon"><img src="icons/icon-' + icon + '.svg" alt="花在哪"></span>'
+        : '<span class="tile">' + sys(a.icon) + '</span>')
+      + '<span class="label">' + a.label + '</span></div>';
+  }).join('');
+  const dock = [
+    { name: 'browser' }, { name: 'clock' }, { name: 'calc' }, { name: 'files' }
+  ];
+  document.getElementById('dock').innerHTML = dock.map(function(d){
+    return '<span class="tile">' + sys(d.name) + '</span>';
+  }).join('');
+</script>
+</body>
+</html>

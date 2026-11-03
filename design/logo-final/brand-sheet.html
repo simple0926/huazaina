@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#F4F1E6}
+  body{width:1680px;height:1120px;font-family:"Helvetica Neue",Arial,"PingFang SC",sans-serif;color:#161A16}
+  .sheet{width:1680px;height:1120px;padding:52px 80px 34px;display:flex;flex-direction:column}
+  header{height:132px;display:flex;justify-content:space-between;align-items:flex-start}
+  .eyebrow{font-size:10px;letter-spacing:.2em;color:#5E6358;text-transform:uppercase}
+  h1{font-family:"Songti SC","Noto Serif SC",serif;font-weight:500;font-size:46px;line-height:1.05;margin:10px 0 8px;letter-spacing:.01em}
+  .sub{font-size:12px;color:#555A4F;letter-spacing:.08em}
+  .meta{text-align:right;font-size:9px;line-height:1.9;color:#5E6358;letter-spacing:.13em}
+  .meta b{display:block;color:#161A16;font-weight:400;font-size:11px;letter-spacing:.16em}
+  .hero{height:300px;border-top:1px solid #1A2018;border-bottom:1px solid #D3CCBA;position:relative;display:flex;align-items:center;justify-content:center;margin-top:8px}
+  .hero img{width:700px;height:auto}
+  .hero .lab{position:absolute;top:12px;left:0;font-size:9px;letter-spacing:.16em;color:#5E6358}
+  .hero .lab2{position:absolute;top:12px;right:0;font-size:9px;letter-spacing:.1em;color:#5E6358;text-align:right}
+  .lower{display:grid;grid-template-columns:460px 460px 1fr;gap:40px;margin-top:28px;height:408px}
+  .col{display:flex;flex-direction:column;min-width:0}
+  .collab{font-size:9px;letter-spacing:.16em;color:#5E6358;border-bottom:1px solid #D3CCBA;padding-bottom:9px;margin-bottom:12px}
+  .symbol{height:224px;display:flex;align-items:center;justify-content:center}
+  .symbol img{width:216px;height:216px}
+  .sizes{display:flex;align-items:flex-end;justify-content:center;gap:28px;height:64px;margin-top:4px}
+  .size{width:64px;text-align:center}
+  .size img{display:block;margin:0 auto 5px}
+  .size span{font-size:8px;letter-spacing:.12em;color:#6B6A60}
+  .icons{display:flex;align-items:flex-end;gap:24px;height:246px;padding-top:8px}
+  .icon{text-align:left}
+  .icon img{display:block;border-radius:22%}
+  .icon .cap{font-size:9px;letter-spacing:.08em;color:#5E6358;margin-top:9px}
+  .icon .sub2{font-size:8px;color:#797D70;margin-top:3px}
+  .icon.paper img{width:176px;height:176px}
+  .icon.ink img{width:104px;height:104px}
+  .why p{font-size:13.5px;line-height:1.62;margin:0 0 8px;color:#2E332B}
+  .why p b{font-weight:600;color:#161A16}
+  .palette{display:flex;gap:12px;margin-top:12px}
+  .sw{width:58px}
+  .sw i{display:block;width:58px;height:44px;border:1px solid rgba(26,32,24,.14)}
+  .sw span{display:block;font-size:8px;line-height:1.5;color:#5E6358;margin-top:4px;letter-spacing:.04em}
+  .type{margin-top:14px;border-top:1px solid #D3CCBA;padding-top:10px}
+  .type .sample{font-family:"Songti SC","Noto Serif SC",serif;font-size:23px;letter-spacing:.04em}
+  .type .small{font-size:8.5px;color:#5E6358;letter-spacing:.06em;line-height:1.7;margin-top:4px}
+  footer{margin-top:auto;border-top:1px solid #1A2018;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+  .mode{display:flex;align-items:center;gap:14px}
+  .mode .box{display:flex;align-items:center;justify-content:center;height:74px;padding:0 14px;border:1px solid #D3CCBA}
+  .mode .box.dark{background:#1A2018;border-color:#1A2018}
+  .mode img{height:62px;width:auto}
+  .mode .cap{font-size:8.5px;color:#5E6358;letter-spacing:.1em;line-height:1.6}
+  .fine{font-size:8.5px;color:#5E6358;letter-spacing:.08em;text-align:right;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div>
+      <div class="eyebrow">花在哪 · identity / 01</div>
+      <h1>一个问号，一本纸账</h1>
+      <div class="sub">LOGO / 2026.11 / 松墨 &nbsp;·&nbsp; 私人账本，只给自己看</div>
+    </div>
+    <div class="meta"><b>E-INK / PAPER</b>HIGH CONTRAST<br>NO GRADIENTS<br>16 PX / ONE COLOUR</div>
+  </header>
+
+  <div class="hero">
+    <div class="lab">01 / PRIMARY LOCKUP · 横版</div>
+    <div class="lab2">symbol + Songti wordmark<br>ink on paper / pine dot</div>
+    <img src="lockup-horizontal.png" alt="花在哪 horizontal lockup">
+  </div>
+
+  <div class="lower">
+    <div class="col">
+      <div class="collab">SYMBOL / 符号</div>
+      <div class="symbol"><img src="symbol.png" alt="花在哪 symbol"></div>
+      <div class="sizes">
+        <div class="size"><img src="symbol.png" width="64" height="64"><span>64</span></div>
+        <div class="size"><img src="symbol.png" width="32" height="32"><span>32</span></div>
+        <div class="size"><img src="symbol.png" width="16" height="16"><span>16</span></div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="collab">APP ICON / 启动图标</div>
+      <div class="icons">
+        <div class="icon paper"><img src="app-icon.png" alt="paper app icon"><div class="cap">纸色 / 主用</div><div class="sub2">paper · pine dot</div></div>
+        <div class="icon ink"><img src="app-icon-ink.png" alt="ink app icon"><div class="cap">墨色 / 深色桌面</div><div class="sub2">ink · paper</div></div>
+      </div>
+    </div>
+
+    <div class="col why">
+      <div class="collab">WHY / 为什么是它</div>
+      <p><b>问号，是名字本身。</b>“花在哪”不是陈述，是一句每天都会问的话。</p>
+      <p><b>折线，是账页的横线。</b>90° / 45°，没有一根多余的曲线；它同时是一条被折起来的账线。</p>
+      <p><b>方点，是只属于你的章。</b>松墨绿只给它；其余全部退回纸与墨。</p>
+      <p><b>纸与墨，不靠渐变和阴影。</b>16 px、单色、反白都成立。</p>
+
+      <div class="palette">
+        <div class="sw"><i style="background:#F1EEE0"></i><span>纸<br>#F1EEE0</span></div>
+        <div class="sw"><i style="background:#1A2018"></i><span>墨<br>#1A2018</span></div>
+        <div class="sw"><i style="background:#2F5A43"></i><span>松墨<br>#2F5A43</span></div>
+        <div class="sw"><i style="background:#6B6A60"></i><span>灰<br>#6B6A60</span></div>
+      </div>
+
+      <div class="type">
+        <div class="sample">花在哪 0123</div>
+        <div class="small">字标 / Noto Serif SC · Songti SC Regular（已转曲）<br>正文 / Noto Sans SC</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="mode">
+      <div class="box"><img src="lockup-mono.png" alt="one colour lockup"></div>
+      <div class="cap">单色 / ONE COLOUR<br>印章、传真、丝网</div>
+    </div>
+    <div class="mode">
+      <div class="box dark"><img src="lockup-reversed.png" alt="reversed lockup"></div>
+      <div class="cap">反白 / REVERSED<br>墨底、深色物料</div>
+    </div>
+    <div class="fine">字标已转曲 · 16 px · 无渐变<br>花在哪 / identity 01 / 2026.11</div>
+  </footer>
+</div>
+</body>
+</html>

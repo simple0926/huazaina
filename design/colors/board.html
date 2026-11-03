@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>花在哪 · 三种配色</title>
+<style>
+  :root{--canvas:#E7E3D8;--ink:#17160F;--muted:#5B5548;--faint:#857D6E;--rule:rgba(23,22,15,.2);--serif:"Songti SC","Source Han Serif SC",Georgia,serif;--sans:-apple-system,"PingFang SC",sans-serif;--mono:"SF Mono",ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:860px;overflow:hidden}
+  body{background:var(--canvas);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .board{padding:54px 74px}
+  .head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--rule);padding-bottom:20px}
+  .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);margin-bottom:10px}
+  h1{font-family:var(--serif);font-size:44px;font-weight:500;letter-spacing:-.01em;line-height:1.1}
+  h1 em{font-style:normal;color:var(--faint)}
+  .intro{max-width:330px;font-size:11.5px;line-height:1.85;color:var(--muted)}
+  .intro b{color:var(--ink);font-weight:500}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:26px}
+  .col{--accent:#7C2B23}
+  .col.a{--accent:#2F5A43}
+  .col.b{--accent:#2B4E78}
+  .col.c{--accent:#B2472F}
+  .colhead{border-top:2px solid var(--accent);padding-top:9px;display:flex;align-items:flex-start;justify-content:space-between}
+  .pk{font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--accent);margin-top:2px}
+  .name{font-family:var(--serif);font-size:25px;letter-spacing:.02em}
+  .desc{font-size:10.5px;color:var(--muted);margin-top:3px;line-height:1.6}
+  .phones{display:flex;gap:10px;margin-top:12px}
+  .ph{width:172px;flex:0 0 172px}
+  .ph .frame{width:172px;height:372px;overflow:hidden;background:#F6F4ED;box-shadow:0 12px 26px rgba(40,33,20,.14),0 1px 0 rgba(23,22,15,.18)}
+  .ph iframe{width:390px;height:844px;border:0;transform:scale(.441);transform-origin:0 0;display:block}
+  .ph .cap{display:flex;justify-content:space-between;font-size:9px;color:var(--faint);margin-top:6px;letter-spacing:.04em}
+  .ph .cap b{font-weight:500;color:var(--ink)}
+  .sw{display:flex;gap:6px;margin-top:10px}
+  .sw i{width:26px;height:26px;display:block;border:1px solid rgba(0,0,0,.06)}
+  .sw span{display:block;font-family:var(--mono);font-size:8px;color:var(--faint);margin-top:3px}
+  .fit{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.6}
+  .fit b{color:var(--ink);font-weight:500}
+  .foot{display:flex;justify-content:space-between;margin-top:24px;font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--faint);border-top:1px solid var(--rule);padding-top:12px}
+</style>
+</head>
+<body>
+<div class="board">
+  <header class="head">
+    <div>
+      <div class="kicker">COLOR STUDY / 03 PALETTES / 2026.11</div>
+      <h1>花在哪 · 月结单 <em>/ 三种配色</em></h1>
+    </div>
+    <p class="intro">同一版式、同一套排版，只换色彩系统：纸色、墨色、一个主色、一个警示色。底部 tab 也随之换色——选中项是主色浅底 + 主色顶线。</p>
+  </header>
+
+  <div class="cols">
+    <section class="col a">
+      <div class="colhead"><div><div class="pk">A / PINE</div><div class="name">松墨</div><div class="desc">米纸 × 松绿 × 麦黄</div></div></div>
+      <div class="phones">
+        <div class="ph"><div class="frame"><iframe src="../entry.html?theme=pine" scrolling="no"></iframe></div><div class="cap"><b>记账</b><span>ENTRY</span></div></div>
+        <div class="ph"><div class="frame"><iframe src="../statement.html?theme=pine" scrolling="no"></iframe></div><div class="cap"><b>月结单</b><span>STATEMENT</span></div></div>
+      </div>
+      <div class="sw">
+        <div><i style="background:#F1EEE0"></i><span>F1EEE0</span></div>
+        <div><i style="background:#1A2018"></i><span>1A2018</span></div>
+        <div><i style="background:#2F5A43"></i><span>2F5A43</span></div>
+        <div><i style="background:#A3472F"></i><span>A3472F</span></div>
+        <div><i style="background:#5D6B3E"></i><span>5D6B3E</span></div>
+      </div>
+      <p class="fit"><b>适合：</b>想让它像一本自己的册子，安静但有颜色；绿色也是「钱在生长」的暗示。</p>
+    </section>
+
+    <section class="col b">
+      <div class="colhead"><div><div class="pk">B / COBALT</div><div class="name">钴蓝</div><div class="desc">雾纸 × 钴蓝 × 陶橙</div></div></div>
+      <div class="phones">
+        <div class="ph"><div class="frame"><iframe src="../entry.html?theme=cobalt" scrolling="no"></iframe></div><div class="cap"><b>记账</b><span>ENTRY</span></div></div>
+        <div class="ph"><div class="frame"><iframe src="../statement.html?theme=cobalt" scrolling="no"></iframe></div><div class="cap"><b>月结单</b><span>STATEMENT</span></div></div>
+      </div>
+      <div class="sw">
+        <div><i style="background:#EEF1F4"></i><span>EEF1F4</span></div>
+        <div><i style="background:#161A22"></i><span>161A22</span></div>
+        <div><i style="background:#2B4E78"></i><span>2B4E78</span></div>
+        <div><i style="background:#B4543B"></i><span>B4543B</span></div>
+        <div><i style="background:#2D6870"></i><span>2D6870</span></div>
+      </div>
+      <p class="fit"><b>适合：</b>想要银行月结单的可信感，偏冷、偏产品化；白天看最干净。</p>
+    </section>
+
+    <section class="col c">
+      <div class="colhead"><div><div class="pk">C / CINNABAR</div><div class="name">朱砂</div><div class="desc">陶纸 × 朱砂 × 橄榄</div></div></div>
+      <div class="phones">
+        <div class="ph"><div class="frame"><iframe src="../entry.html?theme=clay" scrolling="no"></iframe></div><div class="cap"><b>记账</b><span>ENTRY</span></div></div>
+        <div class="ph"><div class="frame"><iframe src="../statement.html?theme=clay" scrolling="no"></iframe></div><div class="cap"><b>月结单</b><span>STATEMENT</span></div></div>
+      </div>
+      <div class="sw">
+        <div><i style="background:#F7EADF"></i><span>F7EADF</span></div>
+        <div><i style="background:#211813"></i><span>211813</span></div>
+        <div><i style="background:#B2472F"></i><span>B2472F</span></div>
+        <div><i style="background:#963A2A"></i><span>963A2A</span></div>
+        <div><i style="background:#666A3A"></i><span>666A3A</span></div>
+      </div>
+      <p class="fit"><b>适合：</b>想要最暖、最有存在感的一版；朱砂像盖章，陶纸比米纸更有情绪。</p>
+    </section>
+  </div>
+
+  <div class="foot"><span>HUAZAINA / UI STUDY 02 · COLOR</span><span>390 × 844 · SAME LAYOUT · 3 PALETTES · 2026</span></div>
+</div>
+</body>
+</html>

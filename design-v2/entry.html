@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记账 · 仪表盘版</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div class="app">
+  <header class="bar px">
+    <div><div class="brand">花在哪</div><div class="sub2">2026.11.02 周一</div></div>
+    <div style="display:flex;gap:8px;align-items:center"><span class="chip">2026.10</span><button class="icon-btn"><i data-icon="gear"></i></button></div>
+  </header>
+
+  <section class="amount-block">
+    <span class="label">金额 / AMOUNT</span>
+    <div class="amount"><span class="cur">¥</span><span>32.50</span><i class="caret"></i></div>
+    <div class="amount-rule"></div>
+    <div class="amount-meta"><span>本月已花</span><b>¥9,483.00</b></div>
+  </section>
+
+  <div class="cats">
+    <div class="cat on"><i data-icon="bowl"></i><span>餐饮</span></div>
+    <div class="cat"><i data-icon="bus"></i><span>交通</span></div>
+    <div class="cat"><i data-icon="bag"></i><span>购物</span></div>
+    <div class="cat"><i data-icon="home"></i><span>居住</span></div>
+    <div class="cat"><i data-icon="ticket"></i><span>娱乐</span></div>
+    <div class="cat"><i data-icon="cross"></i><span>医疗</span></div>
+    <div class="cat"><i data-icon="book"></i><span>学习</span></div>
+    <div class="cat"><i data-icon="gift"></i><span>人情</span></div>
+    <div class="cat"><i data-icon="phone"></i><span>通讯</span></div>
+    <div class="cat"><i data-icon="dots"></i><span>其他</span></div>
+  </div>
+
+  <div class="meta-row">
+    <button><i data-icon="cal"></i>10.31</button>
+    <button><i data-icon="note"></i><b>公司楼下简餐</b></button>
+    <button><i data-icon="wallet"></i>微信</button>
+  </div>
+
+  <div class="today-line"><i></i>今天 3 笔 · ¥222.50</div>
+
+  <div class="pad">
+    <button class="key">7</button><button class="key">8</button><button class="key">9</button>
+    <button class="key">4</button><button class="key">5</button><button class="key">6</button>
+    <button class="key">1</button><button class="key">2</button><button class="key">3</button>
+    <button class="key">.</button><button class="key">0</button><button class="key fn"><i data-icon="back"></i></button>
+  </div>
+
+  <div class="cta-wrap"><button class="cta">记下这笔 <i data-icon="arrow"></i></button></div>
+
+  <nav class="tabbar">
+    <a class="tab on" href="#"><i data-icon="plus"></i>记账</a>
+    <a class="tab" href="#"><i data-icon="list"></i>明细</a>
+    <a class="tab" href="#"><i data-icon="chart"></i>报告</a>
+  </nav>
+</div>
+<script src="icons.js"></script>
+</body>
+</html>

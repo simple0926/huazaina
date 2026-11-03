@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.dataset.theme=new URLSearchParams(location.search).get("theme")||"paper";</script>
+<title>报告 · 月结单版</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .c1 { --c: var(--cat-1); }
+  .c2 { --c: var(--cat-2); }
+  .c3 { --c: var(--cat-3); }
+  .c4 { --c: var(--cat-4); }
+  .c5 { --c: var(--cat-5); }
+  .c6 { --c: var(--cat-6); }
+  .p1 { --c: var(--pay-1); }
+  .p2 { --c: var(--pay-2); }
+  .p3 { --c: var(--pay-3); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <header class="head pad-x">
+    <div class="brandline">
+      <span class="brand">月结单 / STATEMENT</span>
+      <button class="topgear"><i data-icon="gear"></i></button>
+    </div>
+    <div class="pagehead">
+      <div class="date">2026.10</div>
+      <div class="pgmeta">截至 10.31 · 已记账 31 天</div>
+    </div>
+    <div class="hr"></div>
+  </header>
+
+  <section class="stmt-total pad-x">
+    <div class="label">总支出 / TOTAL SPENT</div>
+    <div class="amount"><span class="cur">¥</span><span>9,483.00</span></div>
+    <div class="stmt-meta"><span><b>72</b> 笔</span><span>日均 <b>¥305.90</b></span><span class="delta">↑ 14% 较上月</span></div>
+  </section>
+
+  <div class="kpis pad-x">
+    <div class="kpi"><span class="label">最大一笔</span><b>居住 ¥3,200</b></div>
+    <div class="kpi"><span class="label">最高一天</span><b>10.30 ¥3,296</b></div>
+    <div class="kpi"><span class="label">笔均</span><b>¥131.71</b></div>
+  </div>
+
+  <section class="sect pad-x">
+    <div class="secthead"><span class="label">每日支出 / DAILY</span><span class="sub">最高 10.30 ¥3,296</span></div>
+    <svg class="sparkv1" id="spark" viewBox="0 0 354 64" preserveAspectRatio="none"></svg>
+    <div class="sparkx1"><span>1</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25</span><span>31</span></div>
+  </section>
+
+  <section class="sect pad-x">
+    <div class="secthead"><span class="label">分类 / BREAKDOWN</span><span class="sub">占比 · 金额</span></div>
+    <div class="catrow c1"><span class="idx">01</span><span class="nm">居住</span><span class="bar"><i style="width:41%"></i></span><span class="pct">41%</span><span class="amt">3,885.00</span></div>
+    <div class="catrow c2"><span class="idx">02</span><span class="nm">学习</span><span class="bar"><i style="width:13%"></i></span><span class="pct">13%</span><span class="amt">1,228.00</span></div>
+    <div class="catrow c3"><span class="idx">03</span><span class="nm">人情</span><span class="bar"><i style="width:12%"></i></span><span class="pct">12%</span><span class="amt">1,144.00</span></div>
+    <div class="catrow c4"><span class="idx">04</span><span class="nm">购物</span><span class="bar"><i style="width:9%"></i></span><span class="pct">9%</span><span class="amt">831.00</span></div>
+    <div class="catrow c5"><span class="idx">05</span><span class="nm">娱乐</span><span class="bar"><i style="width:9%"></i></span><span class="pct">9%</span><span class="amt">831.00</span></div>
+    <div class="catrow c6"><span class="idx">06</span><span class="nm">其他</span><span class="bar"><i style="width:16%"></i></span><span class="pct">16%</span><span class="amt">1,564.00</span></div>
+  </section>
+
+  <section class="sect pad-x">
+    <div class="secthead"><span class="label">支付方式 / PAYMENT</span><span class="sub">3 种</span></div>
+    <div class="paybar">
+      <i class="p1" style="width:50%"></i><i class="p2" style="width:38%"></i><i class="p3" style="width:12%"></i>
+    </div>
+    <div class="paylegend">
+      <span>微信 <b>4,730.50</b></span><span>支付宝 <b>3,612.00</b></span><span>现金 <b>1,140.50</b></span>
+    </div>
+  </section>
+
+  <div class="pad-x"><div class="note">居住占 41%，比上月多 ¥1,240。最大的一笔是 10.30 的房租 ¥3,200。</div></div>
+
+  <nav class="nav">
+    <a href="#"><i data-icon="pen"></i><span class="nl"><b>01</b>记账</span></a>
+    <a href="#"><i data-icon="list"></i><span class="nl"><b>02</b>明细</span></a>
+    <a class="on" href="#"><i data-icon="chart"></i><span class="nl"><b>03</b>报告</span></a>
+  </nav>
+</div>
+<script src="icons.js"></script>
+<script>
+  const vals=[320,210,160,320,180,260,120,80,300,190,140,230,220,180,130,320,210,150,240,180,100,190,230,160,200,300,240,160,130,3296,222.5];
+  const W=354,H=64,max=Math.max(...vals);
+  const pts=vals.map((v,i)=>[i*(W/(vals.length-1)), H-3-(v/max)*(H-12)]);
+  const line=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const area=line+' L'+W+' '+(H-1)+' L0 '+(H-1)+' Z';
+  const mi=vals.indexOf(max);
+  document.getElementById('spark').innerHTML =
+    '<line class="base" x1="0" y1="'+(H-1)+'" x2="'+W+'" y2="'+(H-1)+'"/>'+
+    '<path class="area" d="'+area+'"/><path class="line" d="'+line+'"/>'+
+    '<circle class="dot" cx="'+pts[mi][0].toFixed(1)+'" cy="'+pts[mi][1].toFixed(1)+'" r="2.6"/>';
+</script>
+</body>
+</html>

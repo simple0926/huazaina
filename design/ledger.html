@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.dataset.theme=new URLSearchParams(location.search).get("theme")||"paper";</script>
+<title>明细 · 月结单版</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .lrow:nth-child(1) .lcat { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <header class="head pad-x">
+    <div class="brandline">
+      <span class="brand">明细 / LEDGER</span>
+      <button class="topgear"><i data-icon="gear"></i></button>
+    </div>
+    <div class="pagehead">
+      <div class="pleft"><div class="date">2026.10</div><div class="arrows"><button aria-label="上个月">‹</button><button aria-label="下个月">›</button></div></div>
+      <div class="pgmeta">合计<b>¥9,483.00</b></div>
+    </div>
+    <div class="hr"></div>
+  </header>
+
+  <div class="filters pad-x">
+    <button class="on">全部</button>
+    <button>居住</button>
+    <button>购物</button>
+    <button>餐饮</button>
+    <button>学习</button>
+    <button>其他</button>
+    <button>更多 +</button>
+  </div>
+
+  <div class="pad-x" style="flex:1; min-height:0;">
+    <div class="lhead"><span>日期 · 分类与备注</span><span>金额</span></div>
+
+    <div class="dayline"><span>10.31 周五</span><span>222.50</span></div>
+    <div class="lrow"><span class="idx">70</span><span class="lcat">餐饮</span><span class="lnote">公司楼下简餐 · 微信 · 21:50</span><span class="leader"></span><span class="lamt">32.50</span></div>
+    <div class="lrow"><span class="idx">71</span><span class="lcat">餐饮</span><span class="lnote">和朋友吃火锅 · 支付宝 · 10:37</span><span class="leader"></span><span class="lamt">49.00</span></div>
+    <div class="lrow"><span class="idx">72</span><span class="lcat">购物</span><span class="lnote">一件外套 · 支付宝 · 08:23</span><span class="leader"></span><span class="lamt">141.00</span></div>
+
+    <div class="dayline"><span>10.30 周四</span><span>3,296.00</span></div>
+    <div class="lrow"><span class="idx">67</span><span class="lcat">娱乐</span><span class="lnote">电影票 · 现金 · 20:26</span><span class="leader"></span><span class="lamt">34.00</span></div>
+    <div class="lrow"><span class="idx">68</span><span class="lcat">居住</span><span class="lnote">房租 · 微信 · 10:21</span><span class="leader"></span><span class="lamt">3,200.00</span></div>
+    <div class="lrow"><span class="idx">69</span><span class="lcat">人情</span><span class="lnote">同事份子钱 · 现金 · 08:30</span><span class="leader"></span><span class="lamt">62.00</span></div>
+
+    <div class="dayline"><span>10.29 周三</span><span>340.00</span></div>
+    <div class="lrow"><span class="idx">65</span><span class="lcat">学习</span><span class="lnote">两本技术书 · 支付宝 · 19:12</span><span class="leader"></span><span class="lamt">299.00</span></div>
+    <div class="lrow"><span class="idx">66</span><span class="lcat">购物</span><span class="lnote">洗衣液 · 支付宝 · 08:40</span><span class="leader"></span><span class="lamt">41.00</span></div>
+
+    <div class="lsum"><span>10 月 · 72 笔</span><b>¥9,483.00</b></div>
+  </div>
+
+  <nav class="nav">
+    <a href="#"><i data-icon="pen"></i><span class="nl"><b>01</b>记账</span></a>
+    <a class="on" href="#"><i data-icon="list"></i><span class="nl"><b>02</b>明细</span></a>
+    <a href="#"><i data-icon="chart"></i><span class="nl"><b>03</b>报告</span></a>
+  </nav>
+</div>
+<script src="icons.js"></script>
+</body>
+</html>

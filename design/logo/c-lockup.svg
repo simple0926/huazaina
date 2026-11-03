@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256">
+  <g transform="translate(92 18) scale(0.86)">
+    <path d="M76 96V48H180V112L132 144V160" fill="none" stroke="#111111" stroke-width="20" stroke-linecap="square" stroke-linejoin="miter"/>
+    <rect x="116" y="176" width="32" height="32" fill="#111111"/>
+  </g>
+  <text x="342" y="164" font-family="Songti SC, 'Source Han Serif SC', serif" font-size="78" font-weight="500" letter-spacing="2" fill="#111111">花在哪</text>
+</svg>

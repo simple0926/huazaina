@@ -1,0 +1,11 @@
+import { chromium } from 'playwright-core';
+import { resolve } from 'node:path';
+const EXE = process.env.CHROME;
+const b = await chromium.launch(EXE ? { executablePath: EXE } : {});
+const p = await b.newPage({ viewport: { width: 1680, height: 1120 }, deviceScaleFactor: 1 });
+await p.goto('file://' + resolve('concept-board.html'));
+await p.evaluate(() => document.fonts.ready);
+await p.waitForTimeout(600);
+await p.screenshot({ path: resolve('concepts.png'), fullPage: false });
+await b.close();
+console.log('board ok');
